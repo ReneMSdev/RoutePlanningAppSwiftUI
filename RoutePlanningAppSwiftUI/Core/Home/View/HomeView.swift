@@ -27,8 +27,13 @@ struct HomeView: View {
     
     var body: some View {
         ZStack(alignment: .topLeading){
+            Rectangle()
+                .fill(.blue)
+                .frame(width: .infinity, height: .infinity)
+                .ignoresSafeArea()
+            
             // MAP, BOTTOM SHEET & BUTTON
-            ZStack{
+            ZStack(alignment: .topLeading) {
                 Map(position: $camera) {
                     Marker("Temple",
                            systemImage: "house.fill",
@@ -40,7 +45,15 @@ struct HomeView: View {
                            systemImage: "house.fill",
                            coordinate: location3)
                 }
+                if showPlanRoute{
+                    PlanRouteView(showPlanRoute: $showPlanRoute)
+                        .transition(.move(edge: .bottom))
+                }
             }
+            .animation(.spring(), value: showPlanRoute)
+//            .sheet(isPresented: $showPlanRoute) {
+//                PlanRouteView(showPlanRoute: $showPlanRoute)
+//            }
             
             VStack(alignment: .leading) {
                 // SIDE MENU BUTTON
@@ -60,8 +73,10 @@ struct HomeView: View {
             }
             
         }
+        .background(Color(.systemIndigo))
     }
 }
+    
 
 #Preview {
     HomeView()

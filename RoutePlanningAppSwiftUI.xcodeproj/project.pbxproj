@@ -14,6 +14,11 @@
 		CFF628EC2BA81969008F16E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628EB2BA81969008F16E8 /* HomeView.swift */; };
 		CFF628EE2BA81E5F008F16E8 /* SideMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628ED2BA81E5F008F16E8 /* SideMenuButton.swift */; };
 		CFF628F12BA820F6008F16E8 /* PlanRouteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628F02BA820F6008F16E8 /* PlanRouteButtonView.swift */; };
+		CFF628F42BA82F23008F16E8 /* PlanRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628F32BA82F23008F16E8 /* PlanRouteView.swift */; };
+		CFF628F62BA833C3008F16E8 /* StandardTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628F52BA833C3008F16E8 /* StandardTextFieldModifier.swift */; };
+		CFF628F92BA83548008F16E8 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628F82BA83548008F16E8 /* PlusMinusButton.swift */; };
+		CFF628FB2BA839A5008F16E8 /* StandardButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628FA2BA839A5008F16E8 /* StandardButtonModifier.swift */; };
+		CFF628FD2BA83D27008F16E8 /* AddressScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628FC2BA83D27008F16E8 /* AddressScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		CFF628EB2BA81969008F16E8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CFF628ED2BA81E5F008F16E8 /* SideMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuButton.swift; sourceTree = "<group>"; };
 		CFF628F02BA820F6008F16E8 /* PlanRouteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRouteButtonView.swift; sourceTree = "<group>"; };
+		CFF628F32BA82F23008F16E8 /* PlanRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRouteView.swift; sourceTree = "<group>"; };
+		CFF628F52BA833C3008F16E8 /* StandardTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTextFieldModifier.swift; sourceTree = "<group>"; };
+		CFF628F82BA83548008F16E8 /* PlusMinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
+		CFF628FA2BA839A5008F16E8 /* StandardButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonModifier.swift; sourceTree = "<group>"; };
+		CFF628FC2BA83D27008F16E8 /* AddressScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +141,8 @@
 		CFF628D82BA8149B008F16E8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CFF628F52BA833C3008F16E8 /* StandardTextFieldModifier.swift */,
+				CFF628FA2BA839A5008F16E8 /* StandardButtonModifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -156,6 +168,8 @@
 		CFF628DC2BA81522008F16E8 /* PlanRoute */ = {
 			isa = PBXGroup;
 			children = (
+				CFF628F72BA83536008F16E8 /* Components */,
+				CFF628F22BA82F0A008F16E8 /* View */,
 			);
 			path = PlanRoute;
 			sourceTree = "<group>";
@@ -268,6 +282,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		CFF628F22BA82F0A008F16E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFF628F32BA82F23008F16E8 /* PlanRouteView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFF628F72BA83536008F16E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CFF628F82BA83548008F16E8 /* PlusMinusButton.swift */,
+				CFF628FC2BA83D27008F16E8 /* AddressScrollView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,9 +370,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF628C72BA81363008F16E8 /* ContentView.swift in Sources */,
+				CFF628F42BA82F23008F16E8 /* PlanRouteView.swift in Sources */,
 				CFF628F12BA820F6008F16E8 /* PlanRouteButtonView.swift in Sources */,
+				CFF628FB2BA839A5008F16E8 /* StandardButtonModifier.swift in Sources */,
 				CFF628EE2BA81E5F008F16E8 /* SideMenuButton.swift in Sources */,
+				CFF628F92BA83548008F16E8 /* PlusMinusButton.swift in Sources */,
+				CFF628FD2BA83D27008F16E8 /* AddressScrollView.swift in Sources */,
 				CFF628EC2BA81969008F16E8 /* HomeView.swift in Sources */,
+				CFF628F62BA833C3008F16E8 /* StandardTextFieldModifier.swift in Sources */,
 				CFF628C52BA81363008F16E8 /* RoutePlanningAppSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

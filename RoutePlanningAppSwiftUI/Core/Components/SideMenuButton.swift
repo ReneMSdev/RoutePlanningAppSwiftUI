@@ -18,8 +18,8 @@ struct SideMenuButton: View {
                 .padding(12)
                 .font(.largeTitle)
                 .bold()
-                .foregroundColor(.white)
-                .background(.indigo)
+                .foregroundColor(.indigo)
+                .background(.white)
                 .clipShape(Circle())
                 .shadow(color: .black.opacity(0.5), radius: 6)
         }
