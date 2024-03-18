@@ -51,8 +51,13 @@
 		CFF628C32BA81363008F16E8 /* RoutePlanningAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				CFF628C42BA81363008F16E8 /* RoutePlanningAppSwiftUIApp.swift */,
-				CFF628C62BA81363008F16E8 /* ContentView.swift */,
+				CFF628D22BA81449008F16E8 /* App */,
+				CFF628D32BA81450008F16E8 /* Core */,
+				CFF628D72BA81466008F16E8 /* Extensions */,
+				CFF628D62BA81464008F16E8 /* Managers */,
+				CFF628D52BA81462008F16E8 /* Models */,
+				CFF628D42BA8145F008F16E8 /* Services */,
+				CFF628D82BA8149B008F16E8 /* Utils */,
 				CFF628C82BA8136C008F16E8 /* Assets.xcassets */,
 				CFF628CA2BA8136C008F16E8 /* Preview Content */,
 			);
@@ -65,6 +70,161 @@
 				CFF628CB2BA8136C008F16E8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CFF628D22BA81449008F16E8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CFF628C42BA81363008F16E8 /* RoutePlanningAppSwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CFF628D32BA81450008F16E8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CFF628DF2BA81539008F16E8 /* Authentication */,
+				CFF628DE2BA81528008F16E8 /* Components */,
+				CFF628E62BA81699008F16E8 /* Root */,
+				CFF628DD2BA81524008F16E8 /* SideMenu */,
+				CFF628DA2BA81511008F16E8 /* Map */,
+				CFF628DC2BA81522008F16E8 /* PlanRoute */,
+				CFF628DB2BA8151D008F16E8 /* Profile */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CFF628D42BA8145F008F16E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CFF628D52BA81462008F16E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CFF628D62BA81464008F16E8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CFF628D72BA81466008F16E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFF628D82BA8149B008F16E8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CFF628DA2BA81511008F16E8 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		CFF628DB2BA8151D008F16E8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CFF628DC2BA81522008F16E8 /* PlanRoute */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlanRoute;
+			sourceTree = "<group>";
+		};
+		CFF628DD2BA81524008F16E8 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		CFF628DE2BA81528008F16E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CFF628DF2BA81539008F16E8 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CFF628E32BA8160C008F16E8 /* Manager */,
+				CFF628E22BA8160A008F16E8 /* Model */,
+				CFF628E12BA81608008F16E8 /* Protocols */,
+				CFF628E02BA81604008F16E8 /* Service */,
+				CFF628E42BA81627008F16E8 /* Views */,
+				CFF628E52BA81629008F16E8 /* ViewModels */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		CFF628E02BA81604008F16E8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CFF628E12BA81608008F16E8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CFF628E22BA8160A008F16E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFF628E32BA8160C008F16E8 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		CFF628E42BA81627008F16E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CFF628E52BA81629008F16E8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CFF628E62BA81699008F16E8 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				CFF628C62BA81363008F16E8 /* ContentView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
