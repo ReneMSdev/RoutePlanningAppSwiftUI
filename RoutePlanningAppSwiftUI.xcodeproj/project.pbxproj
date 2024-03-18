@@ -11,6 +11,9 @@
 		CFF628C72BA81363008F16E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628C62BA81363008F16E8 /* ContentView.swift */; };
 		CFF628C92BA8136C008F16E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF628C82BA8136C008F16E8 /* Assets.xcassets */; };
 		CFF628CC2BA8136C008F16E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF628CB2BA8136C008F16E8 /* Preview Assets.xcassets */; };
+		CFF628EC2BA81969008F16E8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628EB2BA81969008F16E8 /* HomeView.swift */; };
+		CFF628EE2BA81E5F008F16E8 /* SideMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628ED2BA81E5F008F16E8 /* SideMenuButton.swift */; };
+		CFF628F12BA820F6008F16E8 /* PlanRouteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628F02BA820F6008F16E8 /* PlanRouteButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		CFF628C62BA81363008F16E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CFF628C82BA8136C008F16E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF628CB2BA8136C008F16E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFF628EB2BA81969008F16E8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CFF628ED2BA81E5F008F16E8 /* SideMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuButton.swift; sourceTree = "<group>"; };
+		CFF628F02BA820F6008F16E8 /* PlanRouteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRouteButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +93,7 @@
 				CFF628DE2BA81528008F16E8 /* Components */,
 				CFF628E62BA81699008F16E8 /* Root */,
 				CFF628DD2BA81524008F16E8 /* SideMenu */,
-				CFF628DA2BA81511008F16E8 /* Map */,
+				CFF628DA2BA81511008F16E8 /* Home */,
 				CFF628DC2BA81522008F16E8 /* PlanRoute */,
 				CFF628DB2BA8151D008F16E8 /* Profile */,
 			);
@@ -129,11 +135,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		CFF628DA2BA81511008F16E8 /* Map */ = {
+		CFF628DA2BA81511008F16E8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CFF628EF2BA820CE008F16E8 /* Components */,
+				CFF628E92BA8194E008F16E8 /* Model */,
+				CFF628E82BA818F9008F16E8 /* View */,
+				CFF628E72BA818F7008F16E8 /* ViewModel */,
 			);
-			path = Map;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		CFF628DB2BA8151D008F16E8 /* Profile */ = {
@@ -160,6 +170,7 @@
 		CFF628DE2BA81528008F16E8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CFF628ED2BA81E5F008F16E8 /* SideMenuButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,6 +236,36 @@
 				CFF628C62BA81363008F16E8 /* ContentView.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		CFF628E72BA818F7008F16E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CFF628E82BA818F9008F16E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFF628EB2BA81969008F16E8 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFF628E92BA8194E008F16E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFF628EF2BA820CE008F16E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CFF628F02BA820F6008F16E8 /* PlanRouteButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF628C72BA81363008F16E8 /* ContentView.swift in Sources */,
+				CFF628F12BA820F6008F16E8 /* PlanRouteButtonView.swift in Sources */,
+				CFF628EE2BA81E5F008F16E8 /* SideMenuButton.swift in Sources */,
+				CFF628EC2BA81969008F16E8 /* HomeView.swift in Sources */,
 				CFF628C52BA81363008F16E8 /* RoutePlanningAppSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
