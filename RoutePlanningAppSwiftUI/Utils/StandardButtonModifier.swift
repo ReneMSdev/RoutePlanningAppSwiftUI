@@ -13,7 +13,7 @@ struct StandardButtonModifier: ViewModifier {
             .font(.subheadline)
             .fontWeight(.semibold)
             .foregroundColor(.white)
-            .frame(width: 300, height: 44)
+            .frame(width: 340, height: 44)
             .background(Color(.systemIndigo))
             .cornerRadius(8)
     }

@@ -19,6 +19,7 @@
 		CFF628F92BA83548008F16E8 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628F82BA83548008F16E8 /* PlusMinusButton.swift */; };
 		CFF628FB2BA839A5008F16E8 /* StandardButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628FA2BA839A5008F16E8 /* StandardButtonModifier.swift */; };
 		CFF628FD2BA83D27008F16E8 /* AddressScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628FC2BA83D27008F16E8 /* AddressScrollView.swift */; };
+		CFF629002BA93EB8008F16E8 /* RoutePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF628FF2BA93EB7008F16E8 /* RoutePreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		CFF628F82BA83548008F16E8 /* PlusMinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
 		CFF628FA2BA839A5008F16E8 /* StandardButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardButtonModifier.swift; sourceTree = "<group>"; };
 		CFF628FC2BA83D27008F16E8 /* AddressScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressScrollView.swift; sourceTree = "<group>"; };
+		CFF628FF2BA93EB7008F16E8 /* RoutePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +154,7 @@
 			children = (
 				CFF628EF2BA820CE008F16E8 /* Components */,
 				CFF628E92BA8194E008F16E8 /* Model */,
-				CFF628E82BA818F9008F16E8 /* View */,
+				CFF628E82BA818F9008F16E8 /* Views */,
 				CFF628E72BA818F7008F16E8 /* ViewModel */,
 			);
 			path = Home;
@@ -259,12 +261,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		CFF628E82BA818F9008F16E8 /* View */ = {
+		CFF628E82BA818F9008F16E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				CFF628EB2BA81969008F16E8 /* HomeView.swift */,
+				CFF628FF2BA93EB7008F16E8 /* RoutePreviewView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CFF628E92BA8194E008F16E8 /* Model */ = {
@@ -373,6 +376,7 @@
 				CFF628F42BA82F23008F16E8 /* PlanRouteView.swift in Sources */,
 				CFF628F12BA820F6008F16E8 /* PlanRouteButtonView.swift in Sources */,
 				CFF628FB2BA839A5008F16E8 /* StandardButtonModifier.swift in Sources */,
+				CFF629002BA93EB8008F16E8 /* RoutePreviewView.swift in Sources */,
 				CFF628EE2BA81E5F008F16E8 /* SideMenuButton.swift in Sources */,
 				CFF628F92BA83548008F16E8 /* PlusMinusButton.swift in Sources */,
 				CFF628FD2BA83D27008F16E8 /* AddressScrollView.swift in Sources */,

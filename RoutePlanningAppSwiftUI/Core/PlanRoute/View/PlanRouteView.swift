@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct PlanRouteView: View {
-    @Binding var showPlanRoute: Bool
-    @State private var address = ""
+    @Binding var address: String
+    
     @State private var routeSelected = false
+    @Environment(\.presentationMode) var PlanRoutePresentationMode
     
     var body: some View {
         VStack {
@@ -32,7 +33,7 @@ struct PlanRouteView: View {
                     
                     // exit button
                     Button{
-                        showPlanRoute.toggle()
+                        PlanRoutePresentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: "x.circle")
                             .padding(6)
@@ -44,10 +45,17 @@ struct PlanRouteView: View {
                 
                 // logic for text
                 if !routeSelected {
-                    Text("No route selected")
-                        .font(.title2)
-                        .foregroundStyle(Color(.systemGray))
-                        .padding(.bottom)
+                    VStack(spacing: 8){
+                        Text("No route selected")
+                            .font(.title2)
+                            .foregroundStyle(Color(.systemGray))
+                        
+                        
+                        Text("Enter addresses manually or upload a file")
+                            .font(.subheadline)
+                            .foregroundStyle(Color(.systemGray))
+                    }
+                    .padding(.bottom)
                 }
                 
                 
@@ -74,11 +82,11 @@ struct PlanRouteView: View {
             }
         }
         .ignoresSafeArea()
-        .frame(width: .infinity)
         .background(Color(.secondarySystemBackground))
+        .transition(.move(edge: .bottom))
     }
 }
 
 #Preview {
-    PlanRouteView(showPlanRoute: .constant(true))
+    PlanRouteView(address: .constant(""))
 }
