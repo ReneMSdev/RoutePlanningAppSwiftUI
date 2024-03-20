@@ -8,30 +8,30 @@
 import SwiftUI
 
 struct AddressScrollView: View {
-    @Binding var address: String
+    @ObservedObject var viewModel: PlanRouteViewModel
     
     var body: some View {
         ScrollView {
             NavigationView {
-                Form() {
-                    Section(header: Text("Addresses")) {
-                        TextField("Enter address", text: $address)
-                        
-                        TextField("Enter address", text: $address)
-                        
-                        TextField("Enter address", text: $address)
-                        
-                        TextField("Enter address", text: $address)
-                        
-                        TextField("Enter address", text: $address)
+                List {
+                    ForEach($viewModel.addresses) { $address in
+                        TextField("Enter address", text: $address.address)
                     }
+                    .onDelete(perform: removeAddresses)
                 }
+                .listStyle(.plain)
             }
         }
         .padding(.top, -8)
+        .background(.white)
+        .id(viewModel.addresses.count)
     }
+    
+    func removeAddresses(at offsets: IndexSet) {
+            viewModel.addresses.remove(atOffsets: offsets)
+        }
 }
 
 #Preview {
-    AddressScrollView(address: .constant(""))
+    AddressScrollView(viewModel: PlanRouteViewModel())
 }

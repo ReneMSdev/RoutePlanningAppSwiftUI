@@ -15,8 +15,6 @@ struct HomeView: View {
     @State private var showRoutePreview = true
     @State private var address = ""
     
-
-    
     let location = CLLocationCoordinate2D(
         latitude: 13.686252,
         longitude: 100.566762)
@@ -49,7 +47,7 @@ struct HomeView: View {
                        coordinate: location3)
             }
             .fullScreenCover(isPresented: $showPlanRoute, content: {
-                PlanRouteView(address: $address)
+                PlanRouteView()
             })
             
             VStack(alignment: .leading) {

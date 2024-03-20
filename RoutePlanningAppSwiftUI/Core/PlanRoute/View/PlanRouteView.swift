@@ -8,27 +8,17 @@
 import SwiftUI
 
 struct PlanRouteView: View {
-    @Binding var address: String
-    
+    @StateObject var viewModel = PlanRouteViewModel()
     @State private var routeSelected = false
     @Environment(\.presentationMode) var PlanRoutePresentationMode
     
+    @State private var routeName = ""
+    
     var body: some View {
         VStack {
-            VStack {
+            VStack(alignment: .leading) {
                 // top buttons
                 HStack(){
-                    // upload file
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "arrow.up.doc")
-                            .padding(6)
-                            .font(.system(size: 30))
-                            .foregroundStyle(.indigo)
-                    }
-                    .padding(.horizontal, 6)
-                    
                     Spacer()
                     
                     // exit button
@@ -37,31 +27,51 @@ struct PlanRouteView: View {
                     } label: {
                         Image(systemName: "x.circle")
                             .padding(6)
-                            .font(.system(size: 32))
+                            .font(.system(size: 28))
                             .foregroundStyle(Color(.systemGray2))
                     }
-                    .padding(.horizontal, 6)
+                    .padding(.horizontal, 8)
+                    .padding(.bottom, -10)
                 }
                 
                 // logic for text
-                if !routeSelected {
-                    VStack(spacing: 8){
-                        Text("No route selected")
-                            .font(.title2)
-                            .foregroundStyle(Color(.systemGray))
-                        
-                        
-                        Text("Enter addresses manually or upload a file")
-                            .font(.subheadline)
-                            .foregroundStyle(Color(.systemGray))
-                    }
-                    .padding(.bottom)
+                if viewModel.addresses.allSatisfy({ $0.address.isEmpty }) {
+                    Text("No route selected")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(Color(.gray))
+                        .padding(.leading,20)
+                    
+                } else {
+                    TextField("Unnamed Route", text: $routeName)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color(.black))
+                        .padding(.leading,20)
                 }
+                
+                HStack(spacing: 4) {
+                    Text("Enter addresses manually or")
+                        .font(.subheadline)
+                        .foregroundStyle(Color.gray)
+                    
+                    Button {
+                        
+                    } label: {
+                        Text("upload a file")
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.blue)
+                    }
+                }
+                .padding(.leading, 20)
+                .padding(.bottom, 10)
+                
                 
                 
                 Divider()
                     
-                AddressScrollView(address: $address)
+                AddressScrollView(viewModel: viewModel)
             }
             .padding(.top, 40)
             
@@ -69,7 +79,7 @@ struct PlanRouteView: View {
                 Divider()
                     .padding(.top, -8)
                 
-                PlusMinusButton()
+                PlusMinusButton(viewModel: viewModel)
                 
                 // calculate route button
                 Button {
@@ -88,5 +98,5 @@ struct PlanRouteView: View {
 }
 
 #Preview {
-    PlanRouteView(address: .constant(""))
+    PlanRouteView()
 }

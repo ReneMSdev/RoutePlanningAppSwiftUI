@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct PlusMinusButton: View {
+    @ObservedObject var viewModel: PlanRouteViewModel
+    
     var body: some View {
         HStack() {
             Button (action:{
-                //minus
+                viewModel.removeLastAddress()
                 print("minus tapped")
             }){
                 Image(systemName: "minus")
@@ -25,7 +27,7 @@ struct PlusMinusButton: View {
             
             
             Button(action: {
-                //plus
+                viewModel.addAddressTextField()
                 print("plus tapped")
             }) {
                 Image(systemName: "plus")
@@ -41,5 +43,5 @@ struct PlusMinusButton: View {
 }
 
 #Preview {
-    PlusMinusButton()
+    PlusMinusButton(viewModel: PlanRouteViewModel())
 }
