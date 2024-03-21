@@ -14,8 +14,11 @@ struct AddressScrollView: View {
         ScrollView {
             NavigationView {
                 List {
-                    ForEach($viewModel.addresses) { $address in
-                        TextField("Enter address", text: $address.address)
+                    ForEach(Array(viewModel.addresses.enumerated()), id: \.element.id) { index, _ in
+                        TextField("Enter address", text: Binding(
+                            get: { self.viewModel.addresses[index].address },
+                            set: { self.viewModel.addresses[index].address = $0 }
+                        ))
                     }
                     .onDelete(perform: removeAddresses)
                 }
@@ -28,8 +31,10 @@ struct AddressScrollView: View {
     }
     
     func removeAddresses(at offsets: IndexSet) {
+        DispatchQueue.main.async {
             viewModel.addresses.remove(atOffsets: offsets)
         }
+    }
 }
 
 #Preview {

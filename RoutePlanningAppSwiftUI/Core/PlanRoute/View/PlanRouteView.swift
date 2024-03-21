@@ -41,13 +41,15 @@ struct PlanRouteView: View {
                         .fontWeight(.semibold)
                         .foregroundStyle(Color(.gray))
                         .padding(.leading,20)
+                        .padding(.bottom,4)
                     
                 } else {
-                    TextField("Unnamed Route", text: $routeName)
+                    TextField("\(Image(systemName: "square.and.pencil")) Unnamed Route", text: $routeName)
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundStyle(Color(.black))
                         .padding(.leading,20)
+                        .padding(.bottom,4)
                 }
                 
                 HStack(spacing: 4) {

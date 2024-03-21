@@ -8,14 +8,18 @@
 import SwiftUI
 
 class PlanRouteViewModel: ObservableObject {
-    @Published var addresses = Array(repeating: Address(id: UUID(), address: ""), count: 5)
+    @Published var addresses: [Address]
+    
+    init() {
+        self.addresses = (0..<5).map { _ in Address(address: "") }
+    }
 
     func addAddressTextField() {
-        addresses.append(Address(id: UUID(), address: ""))
+        addresses.append(Address(address: ""))
     }
     
     func resetAddresses() {
-        addresses = Array(repeating: Address(id: UUID(), address: ""), count: 5)
+        self.addresses = (0..<5).map { _ in Address(address: "") }
     }
     
     func removeAddress(at index: Int) {
@@ -23,7 +27,7 @@ class PlanRouteViewModel: ObservableObject {
     }
     
     func removeLastAddress() {
-        if !addresses.isEmpty {
+        if addresses.count > 5 {
             addresses.removeLast()
         }
     }
@@ -34,12 +38,20 @@ class PlanRouteViewModel: ObservableObject {
     }
 }
 
+extension PlanRouteViewModel {
+    func updateAddress(at index: Int, with newAddress: String) {
+            // Check to ensure index is within bounds to avoid out-of-range errors
+            guard addresses.indices.contains(index) else { return }
+            addresses[index].address = newAddress
+        }
+}
+
 struct Route {
     var title: String
     var addresses: [String]
 }
 
 struct Address: Identifiable {
-    let id: UUID
+    let id: UUID = UUID()
     var address: String
 }
