@@ -8,18 +8,14 @@
 import SwiftUI
 
 class PlanRouteViewModel: ObservableObject {
-    @Published var addresses: [Address]
-    
-    init() {
-        self.addresses = (0..<5).map { _ in Address(address: "") }
-    }
+    @Published var addresses: [Address] = []
 
     func addAddressTextField() {
         addresses.append(Address(address: ""))
     }
     
     func resetAddresses() {
-        self.addresses = (0..<5).map { _ in Address(address: "") }
+        addresses = []
     }
     
     func removeAddress(at index: Int) {
@@ -36,14 +32,6 @@ class PlanRouteViewModel: ObservableObject {
         // logic to submit addresses for route planning
         print("Submitted address: \(addresses)")
     }
-}
-
-extension PlanRouteViewModel {
-    func updateAddress(at index: Int, with newAddress: String) {
-            // Check to ensure index is within bounds to avoid out-of-range errors
-            guard addresses.indices.contains(index) else { return }
-            addresses[index].address = newAddress
-        }
 }
 
 struct Route {
