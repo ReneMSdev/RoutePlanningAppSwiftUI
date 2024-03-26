@@ -47,7 +47,7 @@ struct HomeView: View {
                        coordinate: location3)
             }
             .fullScreenCover(isPresented: $showPlanRoute, content: {
-                PlanRouteView()
+                //PlanRouteView()
             })
             
             VStack(alignment: .leading) {
